@@ -1,0 +1,9 @@
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: petstore-load-tests:latest
+    environment:
+      - UV_NO_CACHE=1
+      - PYTHONUNBUFFERED=1
